@@ -1,6 +1,8 @@
 ---
 import Navbar from "../components/navbar.astro";
 import Cabezera from "../components/cabezera.astro";
+import FormContacto from "../components/form-contacto.astro";
+import Footer from "../components/footer.astro";
 ---
 
 <html lang="es">
@@ -14,6 +16,75 @@ import Cabezera from "../components/cabezera.astro";
   <body class="bg-gray-100">
     <Navbar />
     <Cabezera />
-  
+
+    <div class="text-center mt-32">
+      <h2 class="text-4xl font-bold uppercase text-blue-700">¡Algunos modelos!</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-11/12 mx-auto mt-12">
+      <!-- Ventanal Moderno -->
+      <a href="/contacto" class="bg-white shadow-2xl rounded-lg overflow-hidden block transform transition-transform duration-300 hover:scale-105 hover:opacity-90">
+        <img src="../../public/images/ventanal-moderno.jpg" alt="Ventanal Moderno" class="w-full h-64 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-bold text-blue-700">Ventanal Moderno</h3>
+          <p class="text-gray-600 mt-2">Perfecto para espacios minimalistas.</p>
+        </div>
+      </a>
+    
+      <!-- Ventanal Clásico -->
+      <a href="/contacto" class="bg-white shadow-2xl rounded-lg overflow-hidden block transform transition-transform duration-300 hover:scale-105 hover:opacity-90">
+        <img src="../../public/images/ventanal-clasico.jpg" alt="Ventanal Clásico" class="w-full h-64 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-bold text-blue-700">Ventanal Clásico</h3>
+          <p class="text-gray-600 mt-2">Ideal para ambientes clásicos y elegantes.</p>
+        </div>
+      </a>
+    
+      <!-- Ventanal Panorámico -->
+      <a href="/contacto" class="bg-white shadow-2xl rounded-lg overflow-hidden block transform transition-transform duration-300 hover:scale-105 hover:opacity-90">
+        <img src="../../public/images/ventanal-panoramico.jpg" alt="Ventanal Panorámico" class="w-full h-64 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-bold text-blue-700">Ventanal Panorámico</h3>
+          <p class="text-gray-600 mt-2">Visión completa con un diseño espectacular.</p>
+        </div>
+      </a>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-11/12 mx-auto mt-12">
+      <!-- Ventanal Termopanel -->
+      <a href="/contacto" class="bg-white shadow-2xl rounded-lg overflow-hidden block transform transition-transform duration-300 hover:scale-105 hover:opacity-90">
+        <img src="../../public/images/ventanal-termopanel.jpg" alt="Ventanal Termopanel" class="w-full h-64 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-bold text-blue-700">Ventanal Termopanel</h3>
+          <p class="text-gray-600 mt-2">Aislamiento térmico ideal para todo tipo de climas.</p>
+        </div>
+      </a>
+    
+      <!-- Ventanal Deslizante -->
+      <a href="/contacto" class="bg-white shadow-2xl rounded-lg overflow-hidden block transform transition-transform duration-300 hover:scale-105 hover:opacity-90">
+        <img src="../../public/images/ventanal-deslizante.jpg" alt="Ventanal Deslizante" class="w-full h-64 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-bold text-blue-700">Ventanal Deslizante</h3>
+          <p class="text-gray-600 mt-2">Espacio eficiente con sistema deslizante.</p>
+        </div>
+      </a>
+    
+      <!-- Ventanal Acústico -->
+      <a href="/contacto" class="bg-white shadow-2xl rounded-lg overflow-hidden block transform transition-transform duration-300 hover:scale-105 hover:opacity-90">
+        <img src="../../public/images/ventanal-acustico.jpg" alt="Ventanal Acústico" class="w-full h-64 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-bold text-blue-700">Ventanal Acústico</h3>
+          <p class="text-gray-600 mt-2">Diseñado para reducir el ruido exterior y ofrecer tranquilidad.</p>
+        </div>
+      </a>
+    </div>
+    
+    
+
+    <div class="text-center mt-24">
+      <h2 class="text-4xl font-bold uppercase text-blue-700">¡ENVÍA UN CORREO Y TE CONTACTARÉ!</h2>
+    </div>
+    <FormContacto />
+    <Footer />
   </body>
 </html>
