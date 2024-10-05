@@ -1,0 +1,55 @@
+---
+import '@fortawesome/fontawesome-free/css/all.min.css';
+---
+
+<div class="pb-1 pt-3 flex fixed w-full top-0 z-50">
+  <nav class="bg-blue-700 text-white rounded-full shadow-2xl w-11/12 z-50 border mx-auto">
+    <div class="container mx-auto flex justify-between items-center p-2">
+      <div class="text-sm flex items-center">
+        <i class="fas fa-phone-alt mr-2"></i>
+        <span>+56 9 4562 3641</span>
+        <span class="ml-4 flex items-center">
+          <i class="fas fa-envelope mr-2"></i>
+          <span>tupyalum@gmail.com</span>
+        </span>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="flex justify-center">
+  <nav class="bg-gray-100 shadow-2xl fixed w-11/12  z-40 border border-white/30 rounded-full mx-auto top-16">
+    <div class="container mx-auto flex justify-between items-center p-5">
+      <a href="/" class="text-3xl font-bold text-blue-700 hover:text-blue-700">TUPYALUM</a>
+  
+      <button id="menu-button" class="block lg:hidden bg-gray-300/20 p-4 rounded-2xl shadow-2xl">
+        <i class="fas fa-bars text-3xl"></i>
+      </button>
+      
+      <div class="hidden lg:flex space-x-4">
+        <a href="/" class="text-black font-semibold hover:text-blue-700">Inicio</a>
+        <a href="/servicios" class="text-black font-semibold hover:text-blue-700">Servicios</a>
+        <a href="/contacto" class="text-black font-semibold hover:text-blue-700">Contacto</a>
+      </div>
+      
+      <div id="menu" class="lg:hidden hidden absolute top-20 w-11/12 max-w-7xl bg-gray-100 backdrop-blur-lg border rounded-3xl shadow-2xl mx-auto transition-all duration-300 ease-in-out">
+        <a href="/" class="block px-4 py-2 text-blue-700 font-bold">Inicio</a>
+        <a href="/servicios" class="block px-4 py-2 text-blue-700 font-bold">Servicios</a>
+        <a href="/contacto" class="block px-4 py-2 text-blue-700 font-bold">Contacto</a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menu-button');
+    const menu = document.getElementById('menu');
+
+    if (menuButton && menu) {
+      menuButton.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>

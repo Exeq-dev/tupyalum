@@ -1,0 +1,30 @@
+<div class="relative w-11/12 mx-auto rounded-3xl shadow-2xl overflow-hidden mt-44"> 
+    <div class="carousel-images w-full h-96">
+      <img src="../../public/images/1.jpg" alt="Ventana 1" class="carousel-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-1000">
+      <img src="../../public/images/2.jpg" alt="Ventana 2" class="carousel-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-1000">
+      <img src="../../public/images/3.jpg" alt="Ventana 3" class="carousel-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-1000">
+    </div>
+
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-white bg-black/50">
+      <h1 class="text-6xl font-bold">TUPYALUM</h1>
+      <p class="mt-4 text-3xl text-center">Cotiza el ventanal de tus sueños</p>
+    </div>
+  </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.carousel-image');
+    let currentIndex = 0;
+
+    function showNextImage() {
+      images[currentIndex].classList.remove('opacity-100');
+      images[currentIndex].classList.add('opacity-0');
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.remove('opacity-0');
+      images[currentIndex].classList.add('opacity-100');
+    }
+
+    setInterval(showNextImage, 3000);
+    images[currentIndex].classList.add('opacity-100');
+  });
+</script>
