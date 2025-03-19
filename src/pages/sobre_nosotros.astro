@@ -1,0 +1,56 @@
+---
+import Navbar from "../components/navbar.astro";
+import Footer from "../components/footer.astro";
+import ContactoCard from "../components/contacto-card.astro";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Sobre Nosotros - Tupyalum</title>
+    <style>
+        .fade-bottom {
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%); 
+        }
+            
+    </style>
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <Navbar />
+
+    <!-- Sección Sobre Nosotros -->
+    <div class="w-11/12 max-w-6xl mx-auto my-20 p-6 bg-gray-100 shadow-xl rounded-lg">
+      <div class="flex flex-col lg:flex-row items-center">
+        
+        <!-- Imagen de Carlos -->
+        <div class="w-full lg:w-1/2 p-4 relative">
+            <img src="/images/carlos-png.png" alt="Carlos González Escalona" class="w-full h-auto max-w-lg mx-auto rounded-lg fade-bottom">
+        </div>
+
+        <!-- Información de la empresa -->
+        <div class="w-full lg:w-1/2 p-6 text-center lg:text-left">
+          <h2 class="text-3xl font-bold text-blue-700 uppercase mb-4">Sobre Nosotros</h2>
+          <p class="text-gray-700 text-lg">
+            Tupyalum es una empresa con más de 25 años de experiencia en el rubro del vidrio, aluminio y fierro. Nos especializamos en ventanas de aluminio, termopaneles, estructuras metálicas, vidrios templados y espejos.  
+            <br><br>
+            Carlos González Escalona, fundador de Tupyalum, ha trabajado con grandes empresas como Digosa, Thecnal y Vidrios Libertad (actualmente Glastec). Participamos en proyectos de gran envergadura, como la Estación Mapocho y la Planta Chilena de Tabaco en San Fernando, además de múltiples instalaciones residenciales en Pirque, Talagante, Peñaflor, Talca y la Costa Central.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <ContactoCard />
+
+
+
+    <!-- Footer -->
+    <Footer />
+  </body>
+</html>
